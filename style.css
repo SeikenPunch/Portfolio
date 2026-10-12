@@ -43,8 +43,7 @@ body{
 .project-image {
    display: block;
    width: 100%;
-   max-width: 100%;
-   height: auto;
+   height: 100%;
    min-width: 0;
    object-fit: contain;
    border: 0.125rem solid rgb(185, 160, 208);
@@ -60,6 +59,7 @@ body{
    box-sizing: border-box;
    margin: 1.5rem;
    gap: 2rem;
+   align-items: stretch;
 }
 
 .item{
@@ -92,8 +92,9 @@ body{
    padding: .5rem;
    text-align: center;
    box-sizing: border-box;
-   grid-column: 6 / span 2;
-   
+   justify-self: center;
+   grid-column: 5 / span 4;
+   width: fit-content;
 }
 .skills-grid{
    display: grid;
@@ -135,4 +136,104 @@ hr{
    border-radius: 1rem;
    width: 80%;
    margin: 5rem auto;
+}
+
+/* MOBILE CSS */
+@media (max-width: 48rem) {
+
+   body {
+      font-size: 1rem;
+   }
+
+   /* Navbar */
+   .navbar {
+      flex-wrap: wrap;
+   }
+
+   .navbar-li a {
+      font-size: 1.1rem;
+      padding: 1.25rem 1rem;
+   }
+
+   /* Profile picture */
+   .profile-pic {
+      width: 60%;
+      max-width: 15rem;
+      border-width: .25rem;
+      margin-top: 2rem;
+   }
+
+   /* Main grid */
+   .cascading-box {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin: 1rem;
+   }
+
+   /* Make all cards full width */
+   .left,
+   .right,
+   .center,
+   .small-center {
+      grid-column: 1 / -1;
+      width: 100%;
+      min-width: 0;
+   }
+
+   /* Card styling */
+   .item {
+      padding: 1.5rem;
+      border-radius: 1rem;
+   }
+
+   .small-center {
+      padding: 1rem;
+      width: fit-content;
+      max-width: 100%;
+   }
+
+   /* Project images */
+   .project-image {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      object-fit: contain;
+   }
+
+   /* Skills */
+   .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+   }
+
+   .skills-grid h3 {
+      text-align: center;
+   }
+
+   .skills-grid ul {
+      padding-left: 2rem;
+   }
+
+   /* Contact icons */
+   .contact-me {
+      gap: 1.5rem;
+      margin: 2rem 0;
+   }
+
+   .contact-me a {
+      font-size: 1.75rem;
+   }
+
+   /* Prevent long words and links from overflowing */
+   .item,
+   .small-center {
+      overflow-wrap: anywhere;
+   }
+
+   /* Divider */
+   hr {
+      width: 85%;
+      margin: 3rem auto;
+      border-top-width: .25rem;
+   }
 }
