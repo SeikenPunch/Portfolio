@@ -1,0 +1,138 @@
+body{
+   background-color: rgb(23, 15, 28);
+   color: rgb(245, 240, 245);
+   font-family: "consolas", sans-serif;
+   font-size: large;
+   margin: 0;
+   padding-bottom: 5rem;
+}
+
+.navbar{
+   display: flex;
+   justify-content: center;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   background-color: rgb(39, 29, 46);
+}
+
+.navbar-li a{
+   display: block;
+   color: rgb(245, 240, 245);
+   text-align: center;
+   font-weight: bold;
+   padding: 2rem 2rem;
+   text-decoration: none;
+   font-size: x-large;
+}
+
+.navbar-li a:hover{
+   color: rgb(216, 180, 254);
+}
+
+.profile-pic {
+   display: block;
+   margin: auto;
+   width: 33%;
+   border-radius: 30%;
+   border: .5rem solid;
+   border-color: rgb(185, 160, 208);
+   margin-top: 5rem;
+}
+
+.project-image {
+   display: block;
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+   min-width: 0;
+   object-fit: contain;
+   border: 0.125rem solid rgb(185, 160, 208);
+   border-radius: 1.25rem;
+   box-sizing: border-box;
+}
+
+.cascading-box{
+   display: grid;
+   grid-template-columns: repeat(12, minmax(0, 1fr));
+   row-gap: 1.5rem;
+   text-align: center;
+   box-sizing: border-box;
+   margin: 1.5rem;
+   gap: 2rem;
+}
+
+.item{
+   background-color: rgb(39, 29, 46);
+   border: 2px solid rgb(185, 160, 208);
+   border-radius: 20px;
+   padding: 2rem;
+   padding-bottom: 0;
+   padding-top: 0;
+   text-align: center;
+   box-sizing: border-box;
+}
+
+.left{
+   grid-column: 2 / span 5;
+}
+
+.right{
+   grid-column: 7 / span 5;
+}
+
+.center{
+   grid-column: 4 / span 6;
+}
+
+.small-center{
+   background-color: rgb(39, 29, 46);
+   border: 2px solid rgb(185, 160, 208);
+   border-radius: 20px;
+   padding: .5rem;
+   text-align: center;
+   box-sizing: border-box;
+   grid-column: 6 / span 2;
+   
+}
+.skills-grid{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1rem;
+}
+
+.skills-grid h3{
+   text-align: left;
+}
+
+.skills-grid ul{
+   text-align: left;
+}
+
+.contact-me{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   margin: 3rem 0;
+}
+
+.contact-me a{
+   color: rgb(245, 240, 245);
+   font-size: 2rem;
+   text-decoration: none;
+   transition: color .02s ease;
+}
+
+.contact-me a:hover{
+   color: rgb(216, 180, 254);
+}
+
+hr{
+   border: none;
+   align-self: center;
+   border-top: .5rem solid rgb(185, 160, 208);
+   border-radius: 1rem;
+   width: 80%;
+   margin: 5rem auto;
+}
