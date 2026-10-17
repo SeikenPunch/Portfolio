@@ -171,52 +171,89 @@ hr{
 
    .navbar-li a {
       font-size: 1.1rem;
-      padding: 1.25rem 1rem;
-   }
-
-   /* Profile picture */
-   .profile-pic {
-      width: 60%;
-      max-width: 15rem;
-      border-width: .25rem;
-      margin-top: 2rem;
+      padding: 1rem;
    }
 
    /* Main grid */
    .cascading-box {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
       margin: 1rem;
    }
 
-   /* Make all cards full width */
+   /* All grid items use the full available width */
    .left,
    .right,
    .center,
    .small-center {
       grid-column: 1 / -1;
-      width: 100%;
       min-width: 0;
    }
 
-   /* Card styling */
-   .item {
-      padding: 1.5rem;
-      border-radius: 1rem;
+   /* Profile picture and caption */
+   figure.center {
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
    }
 
-   .small-center {
+   .profile-pic {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      border-width: 0.25rem;
+      border-radius: 1.5rem;
+      box-sizing: border-box;
+   }
+
+   .profile-caption {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      box-sizing: border-box;
+   }
+
+   /* Content cards */
+   .item {
       padding: 1rem;
+      border-radius: 1rem;
+      overflow-wrap: anywhere;
+   }
+
+   .item h1 {
+      font-size: 1.75rem;
+   }
+
+   .item h2 {
+      font-size: 1.4rem;
+   }
+
+   .item p {
+      font-size: 1rem;
+      line-height: 1.5;
+   }
+
+   /* Small centered cards */
+   .small-center {
       width: fit-content;
       max-width: 100%;
+      justify-self: center;
+      padding: 1rem;
    }
 
    /* Project images */
    .project-image {
+      display: block;
       width: 100%;
       height: auto;
       max-width: 100%;
       object-fit: contain;
+      box-sizing: border-box;
    }
 
    /* Skills */
@@ -230,29 +267,25 @@ hr{
    }
 
    .skills-grid ul {
+      text-align: left;
       padding-left: 2rem;
    }
 
    /* Contact icons */
    .contact-me {
+      flex-wrap: wrap;
       gap: 1.5rem;
-      margin: 2rem 0;
+      margin: 1.5rem 0;
    }
 
    .contact-me a {
       font-size: 1.75rem;
    }
 
-   /* Prevent long words and links from overflowing */
-   .item,
-   .small-center {
-      overflow-wrap: anywhere;
-   }
-
    /* Divider */
    hr {
       width: 85%;
-      margin: 3rem auto;
-      border-top-width: .25rem;
+      margin: 2.5rem auto;
+      border-top-width: 0.25rem;
    }
 }
